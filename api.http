@@ -1,0 +1,50 @@
+
+### Segmento a utilizar para la API
+@url_host = http://localhost:3000
+
+### GET APP-RAIZ 
+GET {{url_host}}/
+
+### GET FRUTAS-TODAS
+GET {{url_host}}/frutastodas
+
+### GET FRUTA-POR-NOMBRE
+GET {{url_host}}/frutas/nombre/manzanas
+
+### GET FRUTAS-POR-IMPORTE
+GET {{url_host}}/frutas/importe/220
+
+### POST FRUTAS-AGREGAR
+POST {{url_host}}/frutas/agregar/
+Content-Type: application/json
+
+{
+    "id": 102,
+    "nombre": "Mani con cáscara",
+    "imagen": "🥜",
+    "precio": 441
+}
+
+### POST FRUTAS-AGREGAR-DIFERENTE
+POST {{url_host}}/frutas/agregar/
+Content-Type: application/json
+
+{
+    "id": 101,
+    "nombre": "Aceitunas",
+    "imagen": "🫒",
+    "precio": 321
+}
+
+### PATCH FRUTAS-EDITAR
+PATCH {{url_host}}/frutas/editar/102
+Content-Type: application/json
+
+{
+    "nombre": "LecheSoja",
+    "imagen": "🌅",
+    "precio": 1234
+}
+
+### DELETE FRUTAS-ELIMINAR
+DELETE {{url_host}}/frutas/eliminar/102

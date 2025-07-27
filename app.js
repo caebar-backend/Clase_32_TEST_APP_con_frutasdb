@@ -27,3 +27,5 @@ const servidorArranca = () => {
 }
 
 servidorArranca()
+
+module.exports = app 

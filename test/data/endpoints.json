@@ -3,5 +3,9 @@
   { "TestName": "Lista Frutas", "Method": "GET", "Endpoint": "/frutastodas", "ExpectedStatus": 200 },
   { "TestName": "Fruta por ID", "Method": "GET", "Endpoint": "/frutas/1", "ExpectedStatus": 501 },
   { "TestName": "Fruta por Nombre", "Method": "GET", "Endpoint": "/frutas/nombre/manzanas", "ExpectedStatus": 200 },
-  { "TestName": "Fruta por Precio", "Method": "GET", "Endpoint": "/frutas/importe/220", "ExpectedStatus": 200 }
+  { "TestName": "Fruta por Precio", "Method": "GET", "Endpoint": "/frutas/importe/220", "ExpectedStatus": 200 },
+  
+  { "TestName": "Agregar Fruta", "Method": "POST", "Endpoint": "/frutas", "Payload": { "nombre": "kiwi", "color": "verde" }, "ExpectedStatus": 201 },
+  { "TestName": "Modificar Fruta", "Method": "PATCH", "Endpoint": "/frutas/3", "Payload": { "color": "rojo intenso" }, "ExpectedStatus": 200 },
+  { "TestName": "Eliminar Fruta", "Method": "DELETE", "Endpoint": "/frutas/3", "ExpectedStatus": 204 }
 ]

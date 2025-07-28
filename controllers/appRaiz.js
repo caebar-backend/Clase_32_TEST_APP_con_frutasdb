@@ -8,6 +8,7 @@ const appRaiz = (req, res) => {
     ' < -------------------------------------- > '] })
     console.log('\x1b[35m --- Bienvenido, estás en la raíz de las apis frutas 👌😁👍 \x1b[0m')
     console.log('\x1b[33m Conectado en la ruta / ->  Usuario: \x1b[0m ', req.ip)
+    console.log('\x1b[35m ------------------------------------------ ')  
     return
 
 }

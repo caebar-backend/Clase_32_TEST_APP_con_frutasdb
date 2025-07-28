@@ -20,10 +20,11 @@ const getFrutasPorNombre = (req, res) => {
             precio: f.precio
         })
      })
-
-     console.log('\x1b[34m ------ Se obtuvieron la/s fruta/s por nombre ----- \x1b[0m')
+     
+     console.log('\x1b[33m ############################################ \x1b[0m')
+     console.log('\x1b[35m ------ Se obtuvieron la/s fruta/s por nombre ----- \x1b[0m')
      console.table(frutaCopia)
-     console.log('\x1b[34m ----------------------------------- \x1b[0m')
+     console.log('\x1b[35m ----------------------------------- \x1b[0m')
      res.status(200).json(frutaNombre)
      return
     })

@@ -3,6 +3,7 @@ const { FRUTASENDB } = require('../schemas/esquemaFrutas')
 const patchFrutasEditar = (req, res) => {
     const  idp  = req.params.id
     const idOK = parseInt(idp)
+    const frutaEdicion = {id: idOK, ...req.body}
 
     if(isNaN(idOK)){
         res.status(400).json({message: 'El id debe ser un número'})
@@ -23,8 +24,14 @@ const patchFrutasEditar = (req, res) => {
             console.log('\x1b[31m No se pudo encontrar la fruta \x1b[0m')
             return
         }
-        res.status(200).json({...req.body})
+      
+        console.log('\x1b[33m ############################################ \x1b[0m')
+        console.log('\x1b[35m ------ Se editó la fruta --- \x1b[0m')
+        console.table(frutaEdicion)
         console.log('\x1b[32m Fruta editada con éxito \x1b[0m')
+        console.log('\x1b[35m ----------------------------------- \x1b[0m')
+        res.status(200).json({...req.body})
+        
         return
     })
     .catch((error) => {

@@ -47,4 +47,4 @@ Content-Type: application/json
 }
 
 ### DELETE FRUTAS-ELIMINAR
-DELETE {{url_host}}/frutas/eliminar/102
+DELETE {{url_host}}/frutas/eliminar/101

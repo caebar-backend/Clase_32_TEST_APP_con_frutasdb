@@ -21,13 +21,18 @@ const getFrutasPorImporte = (req, res) => {
             res.status(404).json({ mensaje: 'No hay frutas con ese precio!'})
             return console.log('\x1b[31m No hay frutas con ese precio! \x1b[0m')
         }
-       /* const frutita = frutas.forEach((fruta) => {
-        return {    id: fruta.id,
-            nombre: fruta.nombre,
-            imagen: fruta.imagen,
-            precio: fruta.precio
+        const frutita = frutas.map((fruta) => {
+            return {
+                id: fruta.id,
+                nombre: fruta.nombre,
+                imagen: fruta.imagen,
+                precio: fruta.precio
             }
-        })*/
+        })
+        console.log('\x1b[33m ############################################ \x1b[0m')
+        console.log('\x1b[35m --------- Busqueda fruta por Precio ------------ \x1b[0m')
+        console.table(frutita)
+        console.log('\x1b[35m -------------------------------------------------- \x1b[0m')
         res.status(200).json(frutas)
        
         return 

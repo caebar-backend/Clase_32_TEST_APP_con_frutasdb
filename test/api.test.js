@@ -26,7 +26,7 @@ describe('🔍 API endpoints embebidos', function () {
   // Se accede a la constaste testcases y se ejecuta las pruebas para cada caso definido en el archivo JSON
   testCases.forEach(({ TestName, Method, Endpoint, ExpectedStatus, Payload }) => {
     // Creamos una prueba individual con información bien detallada y legible
-    it(`\n ✅  Nombre: ${TestName} \n Método: ${Method} \n Endpoint: ${Endpoint} \n Estado: ${ExpectedStatus}`, async function () {
+    it(`\n ✅  Nombre: ${TestName} --- Método: ${Method} --- Endpoint: ${Endpoint} --- Estado: ${ExpectedStatus}`, async function () {
       // Se convierte el método a minúsculas para que sea compatible
       const httpMethod = Method.toLowerCase()
       // Defino la variable res para almacenar la respuesta

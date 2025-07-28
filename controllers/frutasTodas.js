@@ -17,9 +17,10 @@ const getFrutas = (req, res) => {
                precio: f.precio
            })
        })
-       console.log('\x1b[34m ------ Se obtuvieron las frutas ----- \x1b[0m')
+       console.log('\x1b[33m ############################################ \x1b[0m')
+       console.log('\x1b[35m ------ Se obtuvieron las frutas ----- \x1b[0m')
        console.table(frutasMapeo)
-       console.log('\x1b[34m ----------------------------------- \x1b[0m')
+       console.log('\x1b[35m ----------------------------------- \x1b[0m')
 
        return res.status(200).json(frutasMapeo)
     })
